@@ -1,19 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layout Page 1</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jungjihoon">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Page 1</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header><h1>Header</h1></header>
-    <section><h1>body</h1></section>
+  <body class="bg-light">
+    
+<nav class="navbar navbar-expand-md fixed-top navbar-white bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Logo</a>
+  </div>
+</nav>
+
+<div class="container-fluid bg-white ">
+  <div class="row">
+    <div class="col-2 d-grid gap-2" style="height: 3rem;">
+      <button type="button" class="btn btn-primary" style="background-color: #003366;">과정명</button>
+    </div>
+    <div class="col-sm-6 d-grid gap-2">
+      <button type="button" class="btn btn-secondary">자바 스크립트 (JavaScript 프로그래밍 )</button>
+    </div>
+    <div class="col-2 d-grid gap-2">
+      <button type="button" class="btn btn-primary" style="background-color: #003366;">평가 구분</button>
+    </div>
+    <div class="col-2 d-grid gap-2">
+      <button type="button" class="btn btn-secondary">시험 _1 </button>
+    </div>
+  </div>
+  <div class="row space">
+    <div class="col d-grid gap-2" style="height: 4rem;">
+      <button type="button" class="btn btn-lg btn-primary" style="background-color: #003366;">아름</button>
+    </div>
+    <div class="col d-grid gap-2">
+      <button type="button" class="btn btn-lg btn-secondary">장 대경</button>
+    </div>
+    <div class="col d-grid gap-2">
+      <button type="button" class="btn btn-lg btn-primary" style="background-color: #003366;">제한 시간</button>
+    </div>
+    <div class="col d-grid gap-2">
+      <button type="button" class="btn btn-lg btn-secondary">60 분 (0 / 20문제 ) </button>
+    </div>
+    <div class="col d-grid gap-2">
+      <button type="button" class="btn btn-primary" style="background-color: #003366;">잔여시간</button>
+    </div>
+    <div class="col d-grid gap-2">
+      <button type="button" class="btn btn-lg btn-secondary" >59:53</button>
+    </div>
+  </div>
+  <br/>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-secondary text-center" type="button">  다시 풀기 </button>
+    <button class="btn btn-danger" type="button">답안 제출하기 </button>
+  </div>
+  <br/>
+</div>
+
+<main class="container">
+  <button id="modal-btn" class="btn btn-secondary text-center" type="button">Click Here</button>
+
+  <div id="my-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h6 class="text-center">알림</h6>
+        <h6 class="text-center">[시험 응시시 유의 사항] </h6>
+        <p>1. 시험 용시는 교육원에서 지정한 기간에 가능하며 시험 제한 시간은 60 분입니다. </p>
+        <p>2. 시험은 용시 기간 중 1 회만 응시 가능하고 시험 재용시는 불가능합니다  </p>
+        <p>3. 용시 시간으로부터 60 분 이내에 제출하셔야하며 접속 종료 임시 저장 등의 상태에서도 제한 시간은 중은없이 계속 흘러갑니다 </p>
+        <p>4. 시험 용시시 시간이 30 분 이상 지체되면 로그 아웃되어 지금까지 적은 답안의 내용 없어 질 수 있으니 유의하시기 바랍니다  </p>
+        <p>5. 자동 저장 기능 </p>
+         <p> - 불 외의 상황 (컴퓨터 전원 OFF 인터넷 창의 이상 작동으로 인한 중료)에 대비해서 평가 용시 화면에서 자동으로 임시 장 ·</p>
+         <p> - 단. 훈련생의 평가 진행에 방해되지 않게 별도의 자동 저장 안내 멘트 나 기능 작동은하지 않고 있음 </p>
+        <p>6. 약술형 또는 서울 형 문제에 대해 다른 수강생의 답안과 유사성 여부를 비교 90-110 % 이상 일치 할시에는 모사 답안으로 간주 되오니주의하시기 바랍니다.  </p>
+        <p>7. 수료 기준은 진도를 80 % 이상 100 점 만점 기준 진행 단계 평가와 중간 평가 (시험 _1)와 최중 평가 (시험 _1 또는시 힘 _2)와 과제 환산 검수 합산이 60 점 이상입니다 ·</p>
+        <p>*최종 평가의 경우 수강 기간에 따라 시험이 1 개인 경우, 시험 _1이 최종 평가 이어 시험이 2 개인 경우 시험 _1과 시험 -2를 모두 용시하셔야하며 시험 _2가 최종 평가됩니다
+        </p>
+      </div>
+      <div class="text-center">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        동의하신다면 체크해주십시오 
+      </div>
+      <br/>
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-primary" style="background-color: #003366;">시작하기</button>
+      </div>
+      <br/>
+    </div>
+  </div>
+</main>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/modal.js"></script>
   </body>
 </html>
