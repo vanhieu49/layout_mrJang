@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Layout Page 6</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <style>
-    *{
+      .comment__content-result {
+        margin-bottom: 2%;
+      }
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        
       }
       body {
         background-color: rgb(193, 198, 202);
@@ -18,14 +24,12 @@
         background-color: white;
         z-index: 999999;
         width: 99%;
-        height:70vh;
         margin: 15px auto;
         border: 1px solid black;
         box-shadow: 0 0 black;
       }
       .container .container__content {
         width: 97%;
-        height: 450px;
         margin: 10px auto;
         display: grid;
         grid-template-columns: 5% 95%;
@@ -39,7 +43,7 @@
         background-color: white;
       }
       .container__content .result .result__grid {
-        padding:1%;
+        padding: 1%;
         border: 1px solid black;
         background-color: white;
       }
@@ -54,99 +58,79 @@
         border: 1px solid black;
         grid-row: 3;
         grid-column: 1/3;
+        padding: 5px;
+      }
+      .comment_content-option {
+        background-color: rgb(220, 224, 228);
+      }
+      .comment__text {
+        color: red;
+        margin: 5px;
+      }
+      .comment__content-input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
       .comment__content-result {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 1px;
         width: 95%;
+        border: 1px solid rgb(216, 206, 206);
+        box-shadow: 1px 1px 1px rgb(187, 175, 175);
       }
       .comment__content-result .grid__result {
         border: 1px solid black;
         text-align: center;
+        line-height: 100%;
+        padding-bottom: 10px;
       }
+
       .comment__content-result .grid__result:last-child {
         grid-row: 2;
         grid-column: 1/5;
       }
-      .result__grid.top {
-        height: 15vh;
-        overflow-y: scroll;
-      }
-      .result__grid.bottom {
-        height: 30vh;
-        overflow-y: scroll;
-      }
-      .content {
-        padding:1%;
-      }
-      .content h5 {
-        color:red;
-        padding-bottom: 2%;
-      }
-      .container.container-2 {
-        height: 30vh;
-      }
-    .container-2-content .title-content {
-      padding: 1%;
-      background-color: beige;
-      box-sizing: border-box;
-      height: 5vh;
-    }
-    .container-2-content .title-content > p{
-        margin-left: 20%;
-        margin-right: 20%;
-      display: inline-block;
-      float: left;
-     
-    }
-    .float-left textarea {
-        display: inline-block;
-        float: left;
-        width: 50%;
-        height: 13vh;
+      /* container input */
+      .container .content__input {
+        width: 98%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+        align-items: center;
       }
 
-      .content_container {
-          padding: 1%;
+      .container .content__input .item1,
+      .item2 {
+        background-color: rgb(221, 215, 215);
+        box-sizing: border-box;
+        padding: 5px;
+        margin-bottom: 5px;
       }
-
-      .float-right {
-          width: 50%;
-          display: inline-block;
-          float: left;
+      .container .content__input .item4 {
+        text-align: left;
       }
-
-      .content span {
-          padding-right: 12%;
+      .container .content__input .item4 .item4__title {
+        margin-top: -5px;
+        margin-bottom: 5px;
       }
-
-      .float-right .content p {
-          display: inline-block;
-          float: left;
-          width: 10%;
+      .content__input .item4 .item4_input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
-
-      .float-right ,content textarea {
-          display: inline-block;
-          float: left;
+      .container .content__input .item5 {
+        grid-row: 3;
+        grid-column: 1 / 3;
+        margin: 15px 0;
       }
-
-
-      .content-bottom-right {
-          width: 100%;
-      }
-
-      .content-bottom-right span {
-          padding: 0%;
-      }
-
-      .content-bottom-right textarea {
-          width: 94%;
-      }
-      .content-bottom-center {
-        padding-top: 10%;
-      padding-left:40%;
+      .container .content__input .item5 button {
+        box-sizing: border-box;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 3px;
+        outline: none;
       }
     </style>
   </head>
@@ -159,29 +143,27 @@
         <div class="result">
           <div class="result__grid top">
             <h5><p>Q.</p></h5>
-            <p>JavaScript 프로그래밍 과정 - 과제물 A 형 </p>  
-            <p>[과제 작성시 유의 사항] </p>  
-            <p> 첨부 된 문제 파일을 다운로드하여 작성 후 업로드 해주세요</p> 
+            <p>JavaScript 프로그래밍 과정 - 과제물 A 형</p>
+            <h5>[과제 작성시 유의 사항]</h5>
+            <p>첨부 된 문제 파일을 다운로드하여 작성 후 업로드 해주세요</p>
           </div>
           <div class="result__grid result-right">
-           <p>* 정답 :</p> 
-           <p>* 채점 기준 : </p>
-           <p>* 정답 해설 :</p> 
+            <p>* 정답 :</p>
+            <p>* 채점 기준 :</p>
+            <p>* 정답 해설 :</p>
           </div>
           <div class="result__grid bottom">
             <div class="content">
               <h5>※ 정답 첨부 파일이 있습니다.</h5>
-            <button type="button" >첨부 파일 다운로드</button>
+              <button type="button">첨부 파일 다운로드</button>
             </div>
             <div class="content">
               <h5>※ 훈련생이 제출 한 정답 파일입니다</h5>
-              <button type="button" >
-                1612151251 (윤성욱) _a 형 .do </button>
-                <button type="button" >열람 </button>
+              <button type="button">1612151251 (윤성욱) _a 형 .do</button>
+              <button type="button">열람</button>
             </div>
             <div class="content">
-              <h5>
-                ※ 첨삭 첨부 파일이 있으시면 업로드 해주십시오.</h5>
+              <h5>※ 첨삭 첨부 파일이 있으시면 업로드 해주십시오.</h5>
             </div>
           </div>
           <div class="comment">
@@ -205,7 +187,9 @@
                   cols="160"
                 ></textarea>
               </div>
-              <div><h5>* 파일 크기가 동일한 파일 분석</h5></div>
+              <div class="comment__text">
+                <h5>* 파일 크기가 동일한 파일 분석</h5>
+              </div>
               <div class="comment__content-result">
                 <div class="grid__result">
                   <h5>아이디</h5>
@@ -228,46 +212,33 @@
         </div>
       </div>
     </div>
-    <div class="container container-2">
-        <div class="container-2-content">
-          <div class="title-content">
-            <p>총평</p>
-            <p> 감점 사유</p>
+    <div class="container">
+      <div class="content__input">
+        <div class="item1"><h5>총평</h5></div>
+        <div class="item2"><h5>감점 사유</h5></div>
+        <div class="item3">
+          <textarea name="" id="" cols="87" rows="8"></textarea>
+        </div>
+        <div class="item4">
+          <div class="item4__title">
+            <label>감점 </label>
+            <select name="" id="">
+              <option value="value">0 value</option>
+            </select>
+            <input type="checkbox" name="" id="" />
+            <label>모사 답안시 체크 </label>
           </div>
-          <div class="content_container">
-            <div class="float-left">
-              <textarea
-                  id="w3review"
-                  name="w3review"
-                  rows="4"
-                  cols="160"
-                ></textarea>
-            </div>
-            <div class="float-right">
-              <div class="content">
-                <span>감점 </span><span><input type="checkbox" name="" id="" value=" "><label for="vehicle3">모사 답안시 체크</label><br><br></span>
-                <div class="content-bottom-right">
-                  <span>사유</span>
-                  <textarea
-                    id="w3review"
-                    name="w3review"
-                    rows="4"
-                    cols="160"
-                  ></textarea>
-                </div>
-                
-              </div>
-            </div>
+          <div class="item4_input">
+            <label>사유 </label>
+            <textarea name="" id="" cols="70" rows="6"></textarea>
           </div>
         </div>
-        <div class="content-bottom-center">
-          <button> 
-            첨삭하기</button>
-            <button>초기화 
-              </button>
-            <button>화면 닫기</button>
+        <div class="item5">
+          <button>첨삭하기</button>
+          <button>초기화</button>
+          <button>화면 닫기</button>
         </div>
-    </div>
+      </div>
     </div>
   </body>
 </html>
