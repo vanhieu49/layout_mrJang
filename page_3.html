@@ -97,26 +97,31 @@
         margin-right: 5px;
         background-color: rgb(128, 122, 122);
       }
+      .header__bottom button:nth-child(2) {
+        background-color: rgb(12, 206, 77);
+        margin-right: 5px;
+      }
       .header__bottom button:last-child {
         background-color: rgb(233, 23, 23);
       }
       /* container */
       .container {
         width: 80%;
-        
         margin: 0 auto;
-        margin-top: 10px;
+      }
+      .box__content-title p {
+        font-size: 10px;
       }
       .container__box {
-        box-sizing: border-box;       
+        box-sizing: border-box;
         box-shadow: 1px 1px rgb(168, 162, 162);
         margin-bottom: 30px;
         padding-top: 20px;
         padding-bottom: 50px;
         background-color: white;
-        border-radius: 5px;
+        border-radius: 0 0 5px 5px;
       }
-      hr{
+      hr {
         border: 1px solid black;
         margin-top: 10px;
         margin-bottom: 30px;
@@ -125,21 +130,59 @@
         width: 95%;
         margin: 5px auto;
       }
-      .box__content-result {
-        width: 95%;
-        margin: 0 auto; 
+      .box__content-box {
+        box-sizing: border-box;
+        padding: 90px 50px;
+        background-color: rgb(214, 218, 224);
+        border-radius: 5px;
+        box-shadow: 0 1px 1px rgb(150, 147, 147);
+        margin-bottom: 20px;
       }
-      .box__content-result ul{
-        list-style-type: none;
-        font-size: 12px;
+      .box__content-btn {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-gap: 3px;
+        color: white;
+        text-align: center;
       }
-      .box__content-result ul li{
-       margin-top: 10px;
+      .box__content-btn .item1,
+      .item3 {
+        background-color: rgb(8, 5, 34);
       }
-      .box__content-result li input{
-       margin-right: 5px;
+
+      .box__content-btn .item2 {
+        color: rgb(161, 158, 158);
+        border-top: 1px solid black;
+        margin-left: -5px;
       }
-      
+      .box__content-btn .item4 {
+        color: rgb(161, 158, 158);
+        border: 1px solid black;
+        border-left: none;
+        border-right: none;
+        margin-left: -5px;
+      }
+      .box__content-btn .item4 input {
+        width: 60%;
+        background-color: rgb(189, 179, 179);
+      }
+      .box__content-btn .item4 button {
+        border: none;
+        outline: none;
+        background-color: rgb(197, 49, 49);
+        color: white;
+        padding: 3px;
+      }
+      .box__content-btn .item1,
+      .item2 {
+        box-sizing: border-box;
+        padding: 5px 0;
+      }
+      .box__content-btn .item3,
+      .item4 {
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
     </style>
   </head>
   <body>
@@ -190,6 +233,7 @@
         </div>
         <div class="header__bottom">
           <button>다시 풀기</button>
+          <button>임시 저장</button>
           <button>답안 제출하기</button>
         </div>
       </div>
@@ -199,68 +243,27 @@
       <div class="container__box">
         <div class="box__content">
           <div class="box__content-title">
-            <h5>1) Programming 언어에 대한 설명 중 틀린 것은</h5>
+            <h5>1) JavaScript 프로그래밍 과정-과제물 A 형</h5>
+            <p>[과제 작성시 유의 사항]</p>
+            <p>- 첨부된 문제 파일을 라운로드하여 작성 후 업로드 해주세요.</p>
+            <p>
+              - 파일 업로드 답안 작성란에는'파일 첨부 '라고 기재 후
+              업로드하시면됩니다.
+            </p>
           </div>
-          <hr>
-          <div class="box__content-result">
-            <ul>
-              <li>
-                <input type="radio" id="a" name="coment_content" />
-                <label for="male"
-                  >1. Program의 내용을 기술하기위한 언어적인 표현 방법
-                </label>
-              </li>
-              <li>
-                <input type="radio" id="a" name="coment_content" />
-                <label for="male"
-                  >2. 사람이 컴퓨터에게 지시를 내리기위한 의사 표현 방법
-                </label>
-              </li>
-              <li>
-                <input type="radio" id="a" name="coment_content" />
-                <label for="male"
-                  >3. 그 목적 및 철학에 따라 다양한 언어가 존재
-                </label>
-              </li>
-              <li>
-                <input type="radio" id="a" name="coment_content" />
-                <label for="male"></label>
-                  4. 컴퓨터가 사람에게 실행 된 결과를 보여주는 언어 적 표현
-                </label>
-              </li>
-            </ul>
+          <hr />
+          <div class="box__content-box">
+            <h5></h5>
           </div>
-        </div>
-      </div>
-       <!-- one box -->
-       <div class="container__box">
-        <div class="box__content">
-          <div class="box__content-title">
-            <h5>2) Program에 대한 설명 중 가장 알맞은 것은</h5>
-          </div>
-          <hr>
-          <div class="box__content-result">
-            <ul>
-              <li>
-                <input type="radio" id="a" name="coment_content" />
-                <label for="male"
-                  >1. 실행할 명령을 작성한 문서 파일
-                </label>
-              </li>
-              <li>
-                <input type="radio" id="a" name="coment_content" />
-                <label for="male"
-                  >2. 실행 가능한 형태의 명령들의 모음
-                </label>
-              </li>
-              <li>
-                <input type="radio" id="a" name="coment_content" />
-                <label for="male"
-                  >3. 컴퓨터 내의 모든 파일들
-                </label>
-              </li>
-             
-            </ul>
+          <div class="box__content-btn">
+            <div class="item1"><h5>문제 지점</h5></div>
+            <div class="item2"><h5>1437384335javascriptadoc</h5></div>
+            <div class="item3"><h5>부 파일</h5></div>
+            <div class="item4">
+              <input type="text" />
+              <button>제출</button>
+              <button>문제</button>
+            </div>
           </div>
         </div>
       </div>
