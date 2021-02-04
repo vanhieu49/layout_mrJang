@@ -1,71 +1,269 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Jungjihoon">
-    <meta name="generator" content="Hugo 0.79.0">
-    <title>Page 2</title>
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Page 3</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(193, 198, 202);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      /* header */
+      .header {
+        background-color: white;
+      }
+      .header__content {
+        width: 98%;
+        margin: 0 auto;
+        padding: 10px 0;
+      }
+      .header__top {
+        display: grid;
+        grid-template-columns: 10% 90%;
+      }
+      .header__top-slogan {
+        border-left: 2px solid rgb(158, 152, 152);
+      }
+      .header__top-slogan .text {
+        margin-left: 5px;
+      }
+      .header__top-slogan span {
+        color: blue;
+      }
+      .header__top-slogan h5 {
+        font-size: 18px;
+      }
+      .header__top-slogan p {
+        color: rgb(158, 158, 165);
+        font-size: 8px;
+      }
+      .header__center {
+        display: grid;
+        grid-template-columns: 10% 10% 15% 25% 15% 25%;
+        margin-top: 5px;
+        background-color: rgb(118, 118, 134);
+      }
+      .header__center > div {
+        text-align: center;
+      }
+      .header__center > div:nth-child(odd) {
+        background-color: rgb(5, 5, 56);
+        color: white;
+      }
+      .header__center-item2 {
+        grid-row: 1;
+        grid-column: 2/5;
+      }
+      .header__center-item1,
+      .header__center-item2,
+      .header__center-item3,
+      .header__center-item4 {
+        padding: 5px 0;
+      }
+      .header__center-item5,
+      .header__center-item6,
+      .header__center-item7,
+      .header__center-item8,
+      .header__center-item9,
+      .header__center-item10 {
+        padding: 15px 0;
+        border-top: 1px solid white;
+      }
+      .header__center-item10 h5 {
+        width: 96%;
+        margin: 0 auto;
+        padding: 7px 0;
+        background-color: white;
+        color: red;
+      }
+      .header__bottom {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 5px;
+      }
+      .header__bottom button {
+        border-style: none;
+        outline: none;
+        padding: 7px;
+        color: white;
+      }
+      .header__bottom button:first-child {
+        margin-right: 5px;
+        background-color: rgb(128, 122, 122);
+      }
+      .header__bottom button:last-child {
+        background-color: rgb(233, 23, 23);
+      }
+      /* container */
+      .container {
+        width: 80%;
+        
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+      .container__box {
+        box-sizing: border-box;       
+        box-shadow: 1px 1px rgb(168, 162, 162);
+        margin-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        background-color: white;
+        border-radius: 5px;
+      }
+      hr{
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      .box__content {
+        width: 95%;
+        margin: 5px auto;
+      }
+      .box__content-result {
+        width: 95%;
+        margin: 0 auto; 
+      }
+      .box__content-result ul{
+        list-style-type: none;
+        font-size: 12px;
+      }
+      .box__content-result ul li{
+       margin-top: 10px;
+      }
+      .box__content-result li input{
+       margin-right: 5px;
+      }
+      
+    </style>
   </head>
-  <body class="bg-light">
-    
-<main class="container">
-  <div class="my-3 p-3 bg-white rounded shadow-lg">
-    <h6 class="border-bottom pb-4 mb-0">1) Programming 언어에 대한 설명 중 틀린 것은</h6>
-    <div class="form">
-    <div class="d-flex text-muted pt-4" >
-      <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
-      <p class="pb-3 mb-0 medium">
-        &nbsp; 1. Program의 내용을 기술하기위한 언어적인 표현 방법 
-      </p>
-    </div>
-    <div class="d-flex text-muted pt-3">
-      <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
-      <p class="pb-3 mb-0 small lh-sm">
-        &nbsp; 2. 사람이 컴퓨터에게 지시를 내리기위한 의사 표현 방법 
-      </p>
-    </div>
-    <div class="d-flex text-muted mt-3">
-      <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
-      <p class="pb-3 mb-0 small lh-sm">
-        &nbsp;  3. 그 목적 및 철학에 따라 다양한 언어가 존재 
-      </p>
-    </div>
-    <div class="d-flex text-muted mt-3">
-      <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
-      <p class="pb-3 mb-0 small lh-sm">
-        &nbsp;  4. 컴퓨터가 사람에게 실행 된 결과를 보여주는 언어 적 표현 
-      </p>
-    </div>
-  </div>
-  </div>
-
-  <div class="my-3 p-3 bg-white rounded shadow-lg">
-    <h6 class="border-bottom pb-4 mb-0">2) Program에 대한 설명 중 가장 알맞은 것은</h6>
-    <div class="form">
-    <div class="d-flex text-muted pt-4 form-check" >
-      <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
-      <p class="pb-3 mb-0 medium lh-sm">
-        &nbsp; 1. 실행할 명령을 작성한 문서 파일 
-      </p>
-    </div>
-    <div class="d-flex text-muted pt-3">
-      <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
-      <p class="pb-3 mb-0 small lh-sm">
-        &nbsp; 2. 실행 가능한 형태의 명령들의 모음 
-      </p>
-    </div>
-    <div class="d-flex text-muted mt-3">
-      <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
-      <p class="pb-3 mb-0 small lh-sm">
-        &nbsp;  3. 컴퓨터 내의 모든 파일들
-      </p>
-    </div>
-  </div>
-  </div>
-</main>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__top">
+          <div class="header__top-logo">
+            <h5>logo</h5>
+          </div>
+          <div class="header__top-slogan">
+            <div class="text">
+              <h5><span id="blue">NURI</span>JO</h5>
+              <p>한국디지털컨버전스헙회</p>
+            </div>
+          </div>
+        </div>
+        <div class="header__center">
+          <div class="header__center-item1">
+            <h5>과정명</h5>
+          </div>
+          <div class="header__center-item2">
+            <h5>자바 스크립트 (JavaScript 프로그래밍 )</h5>
+          </div>
+          <div class="header__center-item3">
+            <h5>평가 구분</h5>
+          </div>
+          <div class="header__center-item4">
+            <h5>시험 _1</h5>
+          </div>
+          <div class="header__center-item5">
+            <h5>아름</h5>
+          </div>
+          <div class="header__center-item6">
+            <h5>장 대경</h5>
+          </div>
+          <div class="header__center-item7">
+            <h5>제한 시간</h5>
+          </div>
+          <div class="header__center-item8">
+            <h5>60 분 (0 / 20문제 )</h5>
+          </div>
+          <div class="header__center-item9">
+            <h5>잔여시간</h5>
+          </div>
+          <div class="header__center-item10">
+            <h5>59:53</h5>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <button>다시 풀기</button>
+          <button>답안 제출하기</button>
+        </div>
+      </div>
+    </header>
+    <section class="container">
+      <!-- one box -->
+      <div class="container__box">
+        <div class="box__content">
+          <div class="box__content-title">
+            <h5>1) Programming 언어에 대한 설명 중 틀린 것은</h5>
+          </div>
+          <hr>
+          <div class="box__content-result">
+            <ul>
+              <li>
+                <input type="radio" id="a" name="coment_content" />
+                <label for="male"
+                  >1. Program의 내용을 기술하기위한 언어적인 표현 방법
+                </label>
+              </li>
+              <li>
+                <input type="radio" id="a" name="coment_content" />
+                <label for="male"
+                  >2. 사람이 컴퓨터에게 지시를 내리기위한 의사 표현 방법
+                </label>
+              </li>
+              <li>
+                <input type="radio" id="a" name="coment_content" />
+                <label for="male"
+                  >3. 그 목적 및 철학에 따라 다양한 언어가 존재
+                </label>
+              </li>
+              <li>
+                <input type="radio" id="a" name="coment_content" />
+                <label for="male"></label>
+                  4. 컴퓨터가 사람에게 실행 된 결과를 보여주는 언어 적 표현
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       <!-- one box -->
+       <div class="container__box">
+        <div class="box__content">
+          <div class="box__content-title">
+            <h5>2) Program에 대한 설명 중 가장 알맞은 것은</h5>
+          </div>
+          <hr>
+          <div class="box__content-result">
+            <ul>
+              <li>
+                <input type="radio" id="a" name="coment_content" />
+                <label for="male"
+                  >1. 실행할 명령을 작성한 문서 파일
+                </label>
+              </li>
+              <li>
+                <input type="radio" id="a" name="coment_content" />
+                <label for="male"
+                  >2. 실행 가능한 형태의 명령들의 모음
+                </label>
+              </li>
+              <li>
+                <input type="radio" id="a" name="coment_content" />
+                <label for="male"
+                  >3. 컴퓨터 내의 모든 파일들
+                </label>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
